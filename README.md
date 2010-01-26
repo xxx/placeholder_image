@@ -1,16 +1,16 @@
 placeholder_image
 =================
 
-A gem to generate placeholder images of any (reasonable) size, color (that ImageMagick supports), and text color.
+A gem to generate placeholder images (via data URI) of any (reasonable) size, color (that ImageMagick supports), and text color.
 
 SYNOPSIS
 ========
 
 In a view:
-  <%= placeholder_image_tag :width => 200, :height => 100, :color => :navy, :text_color => :orange %>
+    <%= placeholder_image_tag :width => 200, :height => 100, :color => :navy, :text_color => :orange %>
 
 or for the simplest cases:
-  <%= placeholder_image_tag "200x100" # widthxheight %>
+    <%= placeholder_image_tag "200x100" # widthxheight %>
 
 REQUIREMENTS
 ============
@@ -20,10 +20,18 @@ rmagick - `sudo gem install rmagick`
 INSTALLATION
 ============
 
-  sudo gem install placeholder_image
+    sudo gem install placeholder_image
 
 then in your environment.rb:
-  config.gem 'placeholder_image', :source => 'http://gemcutter.org'
+    config.gem 'placeholder_image', :source => 'http://gemcutter.org'
+    
+then copy the included font file `DroidSans.ttf` to RAILS_ROOT/public/fonts/
+
+TODO
+====
+
+IE support - If I wait long enough, IE will support me instead. Until then, there's no IE support.
+
 
 LICENSE
 =======
