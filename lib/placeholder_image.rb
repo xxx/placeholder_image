@@ -3,7 +3,7 @@ require 'rvg/rvg'
 
 module PlaceholderImage
   def placeholder_image_tag(*args)
-    image_tag placeholder_image_url(*args)
+    "<img src='#{placeholder_image_url(*args)}' />"
   end
 
   private
