@@ -25,8 +25,6 @@ INSTALLATION
 then in your environment.rb:
     config.gem 'placeholder_image', :source => 'http://gemcutter.org'
     
-then copy the included font file `DroidSans.ttf` to RAILS_ROOT/public/fonts/
-
 TODO
 ====
 
@@ -58,5 +56,3 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-The included Droid Sans font is licensed under the Apache License, online at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).

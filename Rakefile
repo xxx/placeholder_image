@@ -11,7 +11,7 @@ begin
     gemspec.email = "mpd@jesters-court.net"
     gemspec.homepage = "http://github.com/xxx/placeholder_image"
     gemspec.authors = ["Michael Dungan"]
-    gemspec.files = ['lib/**/*.rb', 'lib/DroidSans.ttf']
+    gemspec.files = ['lib/**/*.rb']
     gemspec.test_files = []
     gemspec.has_rdoc = false
     gemspec.add_dependency('rmagick', '>= 2.0')

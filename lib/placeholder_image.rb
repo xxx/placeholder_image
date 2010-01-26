@@ -34,7 +34,6 @@ module PlaceholderImage
 
     drawable = Magick::Draw.new
     drawable.pointsize = width / 10
-    drawable.font = ("#{Rails.root}/public/fonts/DroidSans.ttf")
     drawable.fill = text_color
     drawable.gravity = Magick::CenterGravity
     drawable.annotate(img, 0, 0, 0, 0, "#{width} x #{height}")
