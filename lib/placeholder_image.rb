@@ -1,14 +1,18 @@
 require 'RMagick'
 require 'rvg/rvg'
 
-class PlaceholderImage
-  VERSION = '1.0.0'
+module PlaceholderImage
+  def placeholder_image_tag(*args)
+    image_tag placeholder_image_url(*args)
+  end
 
-  def self.placeholder_image_url(*args)
+  private
+
+  def placeholder_image_url(*args)
     "data:image/png;base64,#{placeholder_image_data(*args)}"
   end
 
-  def self.placeholder_image_data(*args)
+  def placeholder_image_data(*args)
     if args.first.is_a? String
       width, height = args.shift.downcase.split('x').map(&:to_i)
     end
@@ -38,3 +42,5 @@ class PlaceholderImage
     [img.to_blob].pack("m")
   end
 end
+
+ActionView::Base.send(:include, PlaceholderImage)

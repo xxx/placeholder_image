@@ -11,10 +11,10 @@ begin
     gemspec.email = "mpd@jesters-court.net"
     gemspec.homepage = "http://github.com/xxx/placeholder_image"
     gemspec.authors = ["Michael Dungan"]
-    gem.files = FileList['lib/**/*.rb']
-    gem.test_files = []
-    gem.has_rdoc = false
-    gem.add_dependency('rmagick', '>= 2.0')
+    gemspec.files = ['lib/**/*.rb', 'lib/DroidSans.ttf']
+    gemspec.test_files = []
+    gemspec.has_rdoc = false
+    gemspec.add_dependency('rmagick', '>= 2.0')
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: gem install jeweler"
