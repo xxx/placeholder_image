@@ -19,10 +19,10 @@ module PlaceholderImage
 
     options = args.shift || {}
 
-    width ||= options[:width]
-    height ||= options[:height]
-    color = options[:color] || "grey69"
-    text_color = options[:text_color] || "black"
+    width ||= options[:width].to_s
+    height ||= options[:height].to_s
+    color = options[:color].to_s || "grey69"
+    text_color = options[:text_color].to_s|| "black"
 
     rvg = Magick::RVG.new(width, height).viewbox(0, 0, width, height) do |canvas|
       canvas.background_fill = color
