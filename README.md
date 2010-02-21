@@ -23,7 +23,7 @@ INSTALLATION
     sudo gem install placeholder_image
 
 then in your environment.rb:
-    config.gem 'placeholder_image', :source => 'http://gemcutter.org'
+    config.gem 'placeholder_image', :source => 'http://rubygems.org'
     
 TODO
 ====
