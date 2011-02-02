@@ -3,13 +3,13 @@ require 'rvg/rvg'
 
 module PlaceholderImage
   def placeholder_image_tag(*args)
-    "<img src='#{placeholder_image_url(*args)}' />"
+    "<img src='#{placeholder_image_url(*args)}' />".html_safe
   end
 
   private
 
   def placeholder_image_url(*args)
-    "data:image/png;base64,#{placeholder_image_data(*args)}"
+    "data:image/png;base64,#{placeholder_image_data(*args)}".html_safe
   end
 
   def placeholder_image_data(*args)
