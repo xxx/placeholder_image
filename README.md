@@ -17,7 +17,7 @@ REQUIREMENTS
 
 rmagick - `sudo gem install rmagick`
 
-HTML-safe strings, which means either using Rails 3, or the [rails_xss](https://github.com/rails/rails_xss) if you're on Rails 2.
+HTML-safe strings, which means either using Rails 3, or the [rails_xss](https://github.com/rails/rails_xss) plugin if you're on Rails 2.
 
 INSTALLATION
 ============
