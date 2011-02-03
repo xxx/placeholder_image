@@ -24,19 +24,21 @@ INSTALLATION
 
 then in your environment.rb:
     config.gem 'placeholder_image', :source => 'http://rubygems.org'
+
+Or if you're using bundler, add the following line to your Gemfile:
+    gem 'placeholder_image'
     
 TODO
 ====
 
 IE support - If I wait long enough, IE will support me instead. Until then, there's no IE support.
 
-
 LICENSE
 =======
 
 (The MIT License)
 
-Copyright (c) 2010 Michael Dungan
+Copyright (c) 2011 Michael Dungan
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
