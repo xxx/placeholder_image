@@ -3,13 +3,13 @@ require 'rvg/rvg'
 
 module PlaceholderImage
   def placeholder_image_tag(*args)
-    "<img src='#{placeholder_image_url(*args)}' />"
+    "<img src='#{placeholder_image_url(*args)}' />".html_safe
   end
 
   private
 
   def placeholder_image_url(*args)
-    "data:image/png;base64,#{placeholder_image_data(*args)}"
+    "data:image/png;base64,#{placeholder_image_data(*args)}".html_safe
   end
 
   def placeholder_image_data(*args)
@@ -22,6 +22,7 @@ module PlaceholderImage
     width ||= options[:width].to_i
     height ||= options[:height].to_i
     color = options.key?(:color) ? options[:color].to_s : "grey69"
+    text = options[:text] || "#{width} x #{height}"
     text_color = options.key?(:text_color) ? options[:text_color].to_s : "black"
 
     rvg = Magick::RVG.new(width, height).viewbox(0, 0, width, height) do |canvas|
@@ -36,7 +37,7 @@ module PlaceholderImage
     drawable.pointsize = width / 10
     drawable.fill = text_color
     drawable.gravity = Magick::CenterGravity
-    drawable.annotate(img, 0, 0, 0, 0, "#{width} x #{height}")
+    drawable.annotate(img, 0, 0, 0, 0, text)
 
     [img.to_blob].pack("m")
   end
