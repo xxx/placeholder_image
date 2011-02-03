@@ -1,7 +1,5 @@
 .autotest
-History.txt
 Manifest.txt
 README.txt
 Rakefile
 lib/placeholder_image.rb
-test/test_placeholder_image.rb
