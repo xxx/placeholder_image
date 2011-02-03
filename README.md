@@ -7,7 +7,7 @@ SYNOPSIS
 ========
 
 In a view:
-    <%= placeholder_image_tag :width => 200, :height => 100, :color => :navy, :text_color => :orange %>
+    <%= placeholder_image_tag :width => 200, :height => 100, :color => :navy, :text_color => :orange, :text => 'some text instead of the default' %>
 
 or for the simplest cases:
     <%= placeholder_image_tag "200x100" # widthxheight %>
@@ -16,6 +16,8 @@ REQUIREMENTS
 ============
 
 rmagick - `sudo gem install rmagick`
+
+HTML-safe strings, which means either using Rails 3, or the [rails_xss](https://github.com/rails/rails_xss) if you're on Rails 2.
 
 INSTALLATION
 ============
